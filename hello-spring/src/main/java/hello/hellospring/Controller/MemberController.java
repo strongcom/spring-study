@@ -12,7 +12,6 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-
     // @Autowired private  MemberService memberService; // DI 방식 중 필드 주입 방법(하지만 선호x) -> 중간에 변경 불가능하기 때문에
 /*
     // 스프링 컨테이너에 등록 - 그효과는 뒤에서 설명
