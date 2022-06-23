@@ -5,6 +5,8 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -14,12 +16,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
+/*
     MemberService memberService = new MemberService();
     // clear 해야하는 memberRepository 필요
+
     MemoryMemberRepository memberRepository = new MemoryMemberRepository();
     // 여기서 MemoryMemberRepository 객체를 memberService와 memberRepository에서 서로 다른 객체로 사용하기에 조금 애매한 점이 있음
     // 굳이 두 개를 다른 객체를 사용할 필요가 없음 (현재 static으로 공유를 하고 있기 때문에 오류가 발생하지 않지만 원래는 x)
 
+*/
+    MemberService memberService;
+    MemoryMemberRepository memberRepository;
+
+    @BeforeEach
+    public void beforeEach() {
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
+        // 같은 메모리리포지토리 사용가능(외부에서 적용) -> 이를 DI라고 함
+    }
 
     @AfterEach
     public void afterEach() {
