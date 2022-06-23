@@ -32,7 +32,7 @@ class MemberServiceTest {
     public void beforeEach() {
         memberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memberRepository);
-        // 같은 메모리리포지토리 사용가능(외부에서 적용) -> 이를 DI라고 함
+        // 같은 메모리리포지토리 사용가능(외부에서 적용) -> 이를 DI(Dependency Injection)->의존관계 주입이 라고 함
     }
 
     @AfterEach
