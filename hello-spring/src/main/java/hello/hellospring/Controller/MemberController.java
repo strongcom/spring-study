@@ -20,7 +20,7 @@ public class MemberController {
     // -> 단순 자바코드는 스프링이 실행을 할 수 없음
     @Autowired
     public MemberController(MemberService memberService) {
-        this.memberService = memberService;  // DI 방식 중 생성자 주입 방법
+        this.memberService = memberService; // DI 방식 중 생성자 주입 방법
     }
 */
 }
