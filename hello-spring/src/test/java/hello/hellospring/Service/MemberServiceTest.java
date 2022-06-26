@@ -1,3 +1,4 @@
+/*
 package hello.hellospring.Service;
 
 import hello.hellospring.domain.Member;
@@ -16,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
+*/
 /*
     MemberService memberService = new MemberService();
     // clear 해야하는 memberRepository 필요
@@ -24,7 +26,8 @@ class MemberServiceTest {
     // 여기서 MemoryMemberRepository 객체를 memberService와 memberRepository에서 서로 다른 객체로 사용하기에 조금 애매한 점이 있음
     // 굳이 두 개를 다른 객체를 사용할 필요가 없음 (현재 static으로 공유를 하고 있기 때문에 오류가 발생하지 않지만 원래는 x)
 
-*/
+*//*
+
     MemberService memberService;
     MemoryMemberRepository memberRepository;
 
@@ -75,14 +78,16 @@ class MemberServiceTest {
 
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
 
-        /*
+        */
+/*
         try {
             memberService.join(member2);
             fail(); // 예외 발생하지 않아 실패
         } catch(IllegalStateException e) {  // 예외 발생이 제대로 실행 되었을 경우
             assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
         }
-        */
+        *//*
+
         // then
 
     }
@@ -94,4 +99,4 @@ class MemberServiceTest {
     @Test
     void findOne() {
     }
-}
+}*/
