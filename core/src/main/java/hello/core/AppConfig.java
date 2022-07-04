@@ -2,6 +2,7 @@ package hello.core;
 
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
+import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
@@ -24,6 +25,6 @@ public class AppConfig {  // 역할들이 드러나는 것이 중요!!
     }
 
     public DiscountPolicy discountPolicy() {  // 주문 정책의 역할
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
